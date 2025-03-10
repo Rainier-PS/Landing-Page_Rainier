@@ -970,7 +970,7 @@
                 </div>
             </div>
             <div class="profile-section">
-                <img src="Profile-Picture-Avatar.png" alt="Profile Picture" class="profile-img" loading="lazy">
+                <img src="Profile-Picture-Avatar.png" alt="Profile Picture" class="profile-img" loading="eager" id="profile-pic">
             </div>
         </div>
 
@@ -1223,9 +1223,11 @@
             });
         }
 
-        // Lazy Loading for Images
-        document.querySelectorAll('img').forEach(img => {
+        // Lazy Loading for Images (except profile-picture)
+        document.querySelectorAll('img:not(#profile-pic)').forEach(img => {
             img.setAttribute('loading', 'lazy');
+});
+
         });
     </script>
 </body>
