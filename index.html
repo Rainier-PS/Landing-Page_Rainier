@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal landing page of a high school student showcasing projects, education, experience, and specialties.">
-    <title>Rainier P.S. | Personal Landing Page</title>
+    <meta name="description" content="Rainier P.S. – A high school student's personal landing page featuring projects, education, and specialties.">
+    <title>Rainier P.S. | Student Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * {
@@ -178,7 +179,7 @@
             line-height: 1.5;
         }
 
-        .specialty-section {
+        .skills-section {
             display: flex;
             align-items: center;
             gap: 40px;
@@ -187,14 +188,14 @@
             border-radius: 15px;
         }
 
-        .specialty-cards {
+        .skills-cards {
             flex: 1;
             display: flex;
             flex-direction: column;
             gap: 20px;
         }
 
-        .specialty-card {
+        .skills-card {
             background: #fff;
             padding: 20px;
             border-radius: 12px;
@@ -205,7 +206,7 @@
             gap: 20px;
         }
 
-        .specialty-icon {
+        .skills-icon {
             font-size: 2em;
             color: #0077b5;
             width: 50px;
@@ -218,28 +219,28 @@
             transition: transform 0.3s ease;
         }
 
-        .specialty-card:hover .specialty-icon {
+        .skills-card:hover .skills-icon {
             transform: scale(1.1);
         }
 
-        .specialty-content {
+        .skills-content {
             flex: 1;
         }
 
-        .specialty-title {
+        .skills-title {
             color: #2d3436;
             font-size: 1.4em;
             font-weight: 600;
             margin-bottom: 8px;
         }
 
-        .specialty-text {
+        .skills-text {
             color: #636e72;
             font-size: 1.1em;
             line-height: 1.6;
         }
 
-        .specialty-label {
+        .skills-label {
             color: #0077b5;
             font-size: 2.2em;
             font-weight: 700;
@@ -299,7 +300,7 @@
         }
 
         .github:hover {
-            background: #2f363d;
+            background: #f0f0f0;
         }
 
         .linkedin {
@@ -308,7 +309,7 @@
         }
 
         .linkedin:hover {
-            background: #006399;
+            background: #1a91da;
         }
 
         .email {
@@ -336,6 +337,15 @@
 
         .instagram:hover {
             background: #d32f50;
+        }
+
+        .facebook {
+            background: #3b5998;
+            color: #fff;
+        }
+
+        .facebook:hover {
+            background: #1a91da;
         }
 
         .social-link span {
@@ -949,7 +959,7 @@
             <div class="content">
                 <h1>Rainier P.S.</h1>
                 <div class="position">High School Student</div>
-                <p class="bio">I'm a high school student passionate about technology, science, and innovation. I enjoy working on projects that combine creativity and problem-solving, from coding experiments and Arduino projects to web & app development. Whether it's building interactive applications or competing in STEM competitions, I'm always eager to learn and create. When I'm not exploring new ideas, you can find me watching movies and picking up new skills. Check out my projects below!</p>
+                <p class="bio">I'm a high school student who loves exploring technology, science, and innovation. I enjoy working on creative projects that challenge me to think critically, like coding experiments, building with Arduino, or developing web and mobile apps. I’m always looking to learn new things, whether that’s through STEM competitions or personal projects. Outside of that, I like watching movies and learning new skills. Feel free to check out my projects below!</p>
                 <a href="resume.pdf" class="cta-button" download>Download Resume</a>
                 <div class="contact-icons">
                     <a href="https://github.com/Rainier-PS" class="contact-icon github" target="_blank">
@@ -966,6 +976,9 @@
                     </a>
                     <a href="https://instagram.com/rainierps8" class="contact-icon instagram" target="_blank">
                         <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://facebook.com/yourusername" class="contact-icon facebook" target="_blank">
+                        <i class="fab fa-facebook"></i>
                     </a>
                 </div>
             </div>
@@ -1029,10 +1042,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="slider-controls">
-                    <button class="slider-control" id="prevSlide"><i class="fas fa-chevron-left"></i></button>
-                    <button class="slider-control" id="nextSlide"><i class="fas fa-chevron-right"></i></button>
-                </div>
                 <div class="slider-indicators" id="sliderIndicators">
                     <div class="slider-indicator active" data-slide="0"></div>
                     <div class="slider-indicator" data-slide="1"></div>
@@ -1042,7 +1051,7 @@
 
         <div class="full-width-section" id="education-experience">
             <div class="education-experience-section">
-                <<div class="education-card">
+                <div class="education-card">
                     <h2 class="education-title">Education</h2>
                     <div class="education-item">
                         <h3>Elementary School</h3>
@@ -1078,41 +1087,55 @@
                 </div>
             </div>
         </div>
-
-        <div class="full-width-section" id="specialty">
-            <div class="specialty-section">
-                <div class="specialty-cards">
-                    <div class="specialty-card">
-                        <div class="specialty-icon">
+        <div class="full-width-section" id="skills">
+            <div class="skills-section">
+                <div class="skills-cards">
+                    <div class="skills-card">
+                        <div class="skills-icon">
                             <i class="fas fa-square-root-alt"></i>
                         </div>
-                        <div class="specialty-content">
-                            <h3 class="specialty-title">Math</h3>
-                            <p class="specialty-text">Strong foundation in mathematics with expertise in problem-solving and analytical thinking.</p>
+                        <div class="skills-content">
+                            <h3 class="skills-title">Math</h3>
+                            <p class="skills-text">Strong foundation in mathematics with expertise in problem-solving and analytical thinking.</p>
                         </div>
                     </div>
-                    <div class="specialty-card">
-                        <div class="specialty-icon">
+                    <div class="skills-card">
+                        <div class="skills-icon">
                             <i class="fas fa-flask"></i>
                         </div>
-                        <div class="specialty-content">
-                            <h3 class="specialty-title">Science</h3>
-                            <p class="specialty-text">Passionate about scientific exploration and understanding the world through research and experimentation.</p>
+                        <div class="skills-content">
+                            <h3 class="skills-title">Science</h3>
+                            <p class="skills-text">Passionate about scientific exploration and understanding the world through research and experimentation.</p>
                         </div>
                     </div>
-                    <div class="specialty-card">
-                        <div class="specialty-icon">
+                    <div class="skills-card">
+                        <div class="skills-icon">
                             <i class="fas fa-code"></i>
                         </div>
-                        <div class="specialty-content">
-                            <h3 class="specialty-title">Coding</h3>
-                            <p class="specialty-text">Skilled in programming with experience in various languages and development projects.</p>
+                        <div class="skills-content">
+                            <h3 class="skills-title">Coding</h3>
+                            <p class="skills-text">Skilled in programming with experience in various languages and development projects.</p>
+                        </div>
+                    </div>
+                    <div class="skills-card">
+                        <div class="skills-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <div class="skills-content">
+                            <h3 class="skills-title">Languages</h3>
+                            <p class="skills-text">
+                                English (Fluent) <br>
+                                Mandarin (Learning) <br>
+                                German (Learning) <br>
+                                Indonesian (Native)
+                            </p>
                         </div>
                     </div>
                 </div>
-                <div class="specialty-label">My Specialty</div>
+                <div class="skills-label">My Skills</div>
             </div>
         </div>
+        
 
         <div class="full-width-section" id="contact">
             <h2 class="contact-title">Contact Me</h2>
@@ -1137,6 +1160,10 @@
                 <a href="https://instagram.com/rainierps8" class="social-link instagram" target="_blank">
                     <i class="fab fa-instagram"></i>
                     <span>Instagram</span>
+                </a>
+                <a href="https://facebook.com/yourusername" class="social-link facebook" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                    <span>Facebook</span>
                 </a>
             </div>
         </div>
@@ -1187,16 +1214,6 @@
         const slides = document.querySelectorAll('.project-slide');
         const totalSlides = slides.length;
         let currentSlide = 0;
-
-        document.getElementById('nextSlide').addEventListener('click', () => {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            updateSlidePosition();
-        });
-
-        document.getElementById('prevSlide').addEventListener('click', () => {
-            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-            updateSlidePosition();
-        });
 
         document.querySelectorAll('.slider-indicator').forEach(indicator => {
             indicator.addEventListener('click', () => {
