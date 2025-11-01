@@ -61,7 +61,7 @@
             justify-content: center;
             overflow: hidden;
             text-align: center;
-            line-height: 250px; /* Center the alternative text vertically */
+            line-height: 250px;
         }
 
         .full-width-section {
@@ -134,7 +134,7 @@
             transition: transform 0.3s ease;
             width: 100%;
             text-decoration: none;
-            color: inherit; /* Ensure the text color is inherited */
+            color: inherit;
         }
 
         .project-card:hover {
@@ -143,7 +143,7 @@
 
         .project-card:hover .project-title,
         .project-card:hover .project-subtitle {
-            text-decoration: none; /* Ensure no underline on hover */
+            text-decoration: none;
         }
 
         .project-image {
@@ -158,7 +158,7 @@
             justify-content: center;
             overflow: hidden;
             text-align: center;
-            line-height: 150px; /* Center the alternative text vertically */
+            line-height: 150px;
         }
 
         .project-content {
@@ -375,7 +375,7 @@
                 margin-bottom: 20px;
                 display: flex;
                 justify-content: center;
-                align-items: center; /* Center the profile picture vertically */
+                align-items: center;
             }
 
             .profile-img {
@@ -500,7 +500,6 @@
             }
         }
 
-        /* Navigation Styles */
         .nav-toggle {
             position: fixed;
             top: 20px;
@@ -941,7 +940,7 @@
             <li><a href="#about">About Me</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#education-experience">Education & Experience</a></li>
-            <li><a href="#specialty">Specialty</a></li>
+            <li><a href="#specialty">Skills</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </div>
@@ -993,8 +992,33 @@
                 <div class="projects-slides">
                     <div class="project-slide">
                         <div class="projects-grid">
+                            <div class="project-card">
+                                <img src="https://raw.githubusercontent.com/Rainier-PS/DIY-Bluetooth-Mechanical-Keyboard/refs/heads/main/images/3D%20Model.avif" alt="DIY Bluetooth mechanical keyboard 3D model" class="project-image" loading="lazy">
+                                <div class="project-content">
+                                    <h3 class="project-title">DIY Bluetooth Mechanical Keyboard</h3>
+                                    <p class="project-subtitle">This custom-designed DIY Bluetooth mechanical keyboard features hot-swappable switches, USB-C, a slide potentiometer, built-in NFC, and a 6° ergonomic tilt with wrist rest.</p>
+                                </div>
+                            </div>
+                            <div class="project-card">
+                                <img src="https://raw.githubusercontent.com/Rainier-PS/Hackpad-Rainier/refs/heads/main/images/CAD.avif" alt="Hackpad macropad CAD render" class="project-image" loading="lazy">
+                                <div class="project-content">
+                                    <h3 class="project-title">Hackpad</h3>
+                                    <p class="project-subtitle">A DIY custom macropad built using a Xiao RP2040 for Hack Club's <strong>Highway to Undercity</strong> event.</p>
+                                </div>
+                            </div>
+                            <div class="project-card">
+                                <img src="https://raw.githubusercontent.com/Rainier-PS/DogFace-PCB-Art/refs/heads/main/images/3D%20Model.avif" alt="DogFace PCB art keychain 3D model" class="project-image" loading="lazy">
+                                <div class="project-content">
+                                    <h3 class="project-title">DogFace PCB Art Keychain</h3>
+                                    <p class="project-subtitle">A dog-shaped interactive PCB art keychain with LEDs, buttons, a vibration motor, and a custom outline — made with KiCad.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-slide">
+                        <div class="projects-grid">
                             <a href="https://github.com/Rainier-PS/SoundTune" target="_blank" class="project-card">
-                                <img src="SoundTune_Icon.jpg" alt="Project 1" class="project-image" loading="lazy">
+                                <img src="SoundTune_Icon.avif" alt="SoundTune Android app icon" class="project-image" loading="lazy">
                                 <div class="project-content">
                                     <h3 class="project-title">SoundTune</h3>
                                     <p class="project-subtitle">SoundTune is an Android app that automatically adjusts media volume based on ambient noise levels. It works while media is playing and when the screen is off.</p>
@@ -1007,38 +1031,13 @@
                                     <p class="project-subtitle">Seed Paper is an eco-friendly, biodegradable paper embedded with seeds, designed to be planted instead of discarded. This project showcases sustainability through science and aligns with the United Nations Sustainable Development Goals (SDGs), particularly those focused on responsible consumption, climate action, and life on land.</p>
                                 </div>
                             </a>
-                            <a href="https://example.com/project3" target="_blank" class="project-card">
-                                <img src="https://via.placeholder.com/150" alt="Project 3" class="project-image" loading="lazy">
+                            <a href="https://rainier-ps.github.io/Light-Based-Canopy-System/" target="_blank" class="project-card">
+                                <img src="https://raw.githubusercontent.com/Rainier-PS/Light-Based-Canopy-System/refs/heads/main/images/site/Front-View.avif" alt="Smart light-based canopy system front view" class="project-image" loading="lazy">
                                 <div class="project-content">
                                     <h3 class="project-title">Light-Based Canopy System</h3>
                                     <p class="project-subtitle">An automated, light-responsive canopy system with real-time LCD status display and servo actuation.</p>
                                 </div>
                             </a>
-                        </div>
-                    </div>
-                    <div class="project-slide">
-                        <div class="projects-grid">
-                            <div class="project-card">
-                                <img src="https://via.placeholder.com/150" alt="Project 4" class="project-image" loading="lazy">
-                                <div class="project-content">
-                                    <h3 class="project-title">Project 4</h3>
-                                    <p class="project-subtitle">Coming Soon...</p>
-                                </div>
-                            </div>
-                            <div class="project-card">
-                                <img src="https://via.placeholder.com/150" alt="Project 5" class="project-image" loading="lazy">
-                                <div class="project-content">
-                                    <h3 class="project-title">Project 5</h3>
-                                    <p class="project-subtitle">Coming Soon...</p>
-                                </div>
-                            </div>
-                            <div class="project-card">
-                                <img src="https://via.placeholder.com/150" alt="Project 6" class="project-image" loading="lazy">
-                                <div class="project-content">
-                                    <h3 class="project-title">Project 6</h3>
-                                    <p class="project-subtitle">Coming Soon...</p>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -1072,6 +1071,10 @@
                     <div class="education-item">
                         <h3>Extracurricular Activities</h3>
                         <p>Digital Jorunalism</p>
+                        <p>Hack The Hat Elective Member (Raspberry Pi & Sense Hat</p>
+                        <p>Hack Club Member</p>
+                        <p>Club Leader Hack Club Binus School Semarang</p>
+                        <p>STEM Club Member</p>
                     </div>
                 </div>
                 <div class="experience-card">
@@ -1171,7 +1174,6 @@
 
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script>
-        // Navigation Toggle
         const navToggle = document.getElementById('navToggle');
         const navPanel = document.getElementById('navPanel');
         const navOverlay = document.getElementById('navOverlay');
@@ -1184,7 +1186,6 @@
         navToggle.addEventListener('click', toggleNav);
         navOverlay.addEventListener('click', toggleNav);
 
-        // Close nav when clicking a link
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 navPanel.classList.remove('active');
@@ -1192,7 +1193,6 @@
             });
         });
 
-        // Return to Top Button
         const returnTop = document.getElementById('returnTop');
 
         window.addEventListener('scroll', () => {
@@ -1210,7 +1210,6 @@
             });
         });
 
-        // Projects Slider
         const slides = document.querySelectorAll('.project-slide');
         const totalSlides = slides.length;
         let currentSlide = 0;
@@ -1225,7 +1224,7 @@
         function updateSlidePosition() {
             const slidesContainer = document.querySelector('.projects-slides');
             const isMobile = window.innerWidth <= 768;
-            const slideWidth = 100; // 100% for both mobile and desktop
+            const slideWidth = 100;
             slidesContainer.style.transform = `translateX(-${currentSlide * slideWidth}%)`;
             updateIndicators();
         }
@@ -1239,11 +1238,11 @@
                 }
             });
         }
-
-        // Lazy Loading for Images
+        
         document.querySelectorAll('img:not(#profile-pic)').forEach(img => {
             img.setAttribute('loading', 'lazy');
         });
     </script>
 </body>
 </html>
+
