@@ -1,58 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Rainier P.S. – A high school student's personal landing page featuring projects, education, and specialties.">
-    <title>Rainier Pearson Saputra</title>
-    <link rel="icon" href="https://raw.githubusercontent.com/Rainier-PS/Personal-Website/main/images/site/Rainier%20Pearson%20Saputra-Favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rainier Pearson Saputra</title>
 
-    <link rel="preload" href="js/script.js" as="script">
-    <link rel="preload" href="css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="css/styles.css"></noscript>
+  <meta name="description" content="Portfolio of Rainier Pearson Saputra — student, aspiring engineer, and tech enthusiast." />
+  <link rel="canonical" href="https://rainier-ps.github.io/Landing-Page_Rainier/" />
 
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'en',
-                includedLanguages: 'en,es,fr,de,zh-CN,ja,ko,ru,it,pt',
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-                autoDisplay: false
-            }, 'google_translate_element');
-        }
+  <meta property="og:title" content="Rainier Pearson Saputra" />
+  <meta property="og:description" content="Student, aspiring engineer, and tech enthusiast. Explore my projects and skills." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://raw.githubusercontent.com/Rainier-PS/Personal-Website/main/images/site/Rainier%20Pearson%20Saputra-Avatar.jpg" />
+  <meta property="og:url" content="https://rainier-ps.github.io/Landing-Page_Rainier/" />
 
-        function setLanguage(lang) {
-            var select = document.querySelector('.goog-te-combo');
-            if (select) {
-                select.value = lang;
-                select.dispatchEvent(new Event('change'));
-            }
-        }
+  <link rel="icon" href="https://raw.githubusercontent.com/Rainier-PS/Personal-Website/main/images/site/Rainier%20Pearson%20Saputra-Favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/Rainier-PS/Personal-Website/main/images/site/apple-touch-icon.png" />
+  <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#f8f9fa" media="(prefers-color-scheme: light)" />
 
-        function getLanguage() {
-            return localStorage.getItem('selectedLanguage') || 'en';
-        }
+  <script src="https://unpkg.com/lucide@latest" defer></script>
 
-        function saveLanguage(lang) {
-            localStorage.setItem('selectedLanguage', lang);
-        }
+  <meta name="keywords" content="Rainier Pearson Saputra, portfolio, projects, engineering student, tech enthusiast" />
+  <meta name="robots" content="index, follow" />
 
-        document.addEventListener('DOMContentLoaded', function() {
-            var lang = getLanguage();
-            setLanguage(lang);
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Rainier Pearson Saputra" />
+  <meta name="twitter:description" content="Student, aspiring engineer, and tech enthusiast. Explore my projects and skills." />
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/Rainier-PS/Personal-Website/main/images/site/Rainier%20Pearson%20Saputra-Avatar.jpg" />
 
-            document.getElementById('languageSwitcher').addEventListener('change', function() {
-                var selectedLang = this.value;
-                setLanguage(selectedLang);
-                saveLanguage(selectedLang);
-            });
-        });
-    </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Rainier Pearson Saputra",
+    "url": "https://rainier-ps.github.io/Landing-Page_Rainier/",
+    "image": "https://raw.githubusercontent.com/Rainier-PS/Personal-Website/main/images/site/Rainier%20Pearson%20Saputra-Avatar.jpg",
+    "description": "Student, aspiring engineer, and tech enthusiast.",
+    "sameAs": [
+      "https://github.com/Rainier-PS"
+    ],
+    "jobTitle": "Student",
+    "knowsAbout": [
+      "Engineering",
+      "Programming",
+      "Electronics",
+      "Robotics",
+      "STEM Education",
+      "Artificial Intelligence",
+      "Sustainable Technology",
+      "Science Competitions"
+    ]
+  }
+  </script>
+
+  <meta name="google-site-verification" content=" " />
+
+  <link rel="preload" href="js/script.js" as="script">
+  <link rel="preload" href="css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/styles.css"></noscript>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div id="google_translate_element" style="display:none;"></div>
-
     <button class="nav-toggle" id="navToggle">
         <i class="fas fa-bars"></i>
     </button>
@@ -62,7 +73,7 @@
             <li><a href="#about">About Me</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#education-experience">Education & Experience</a></li>
-            <li><a href="#specialty">Skills</a></li>
+            <li><a href="#skills">Skills</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </div>
@@ -79,7 +90,7 @@
                 <h1>Rainier P.S.</h1>
                 <div class="position">High School Student</div>
                 <p class="bio">I'm a high school student who loves exploring technology, science, and innovation. I enjoy working on creative projects that challenge me to think critically, like coding experiments, building with Arduino, or developing web and mobile apps. I’m always looking to learn new things, whether that’s through STEM competitions or personal projects. Outside of that, I like watching movies and learning new skills. Feel free to check out my projects below!</p>
-                <a href="resume.pdf" class="cta-button" download>Download Resume</a>
+                <a href="#" class="cta-button" onclick="return false;" title="Coming Soon">Download Resume (Coming Soon)</a>
                 <div class="contact-icons">
                     <a href="https://github.com/Rainier-PS" class="contact-icon github" target="_blank">
                         <i class="fab fa-github"></i>
@@ -101,8 +112,16 @@
                     </a>
                 </div>
             </div>
-            <div class="profile-section">
-                <img src="https://raw.githubusercontent.com/Rainier-PS/Personal-Website/main/images/site/Rainier%20Pearson%20Saputra-Avatar.svg" alt="Profile" class="profile-img" loading="eager" id="profile-pic">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                    <img src="https://raw.githubusercontent.com/Rainier-PS/Personal-Website/main/images/site/Rainier%20Pearson%20Saputra-Avatar.svg" alt="Profile" />
+                    </div>
+                    <div class="flip-card-back">
+                    <img class="logo-light" src="https://raw.githubusercontent.com/Rainier-PS/Personal-Website/main/images/site/Rainier%20Logo-Reversed.svg" alt="Logo Light" />
+                    <img class="logo-dark" src="https://raw.githubusercontent.com/Rainier-PS/Personal-Website/main/images/site/Rainier%20Logo-Primary.svg" alt="Logo Dark" />
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -184,12 +203,10 @@
                         <h3>High School</h3>
                         <p>Binus School Semarang (2024-Present)</p>
                     </div>
-                    <div class="education-item">
-                        <h3>Additional Training</h3>
-                        <p>Learning to code through both formal education in school and independent self-study, exploring web development, Arduino, robotics, AI, and software programming.</p>
-                    </div>
-                    <div class="education-item">
-                        <h3>Extracurricular Activities</h3>
+                </div>
+                <div class="experience-card">
+                    <h2 class="experience-title">Experience</h2>
+                    <div class="experience-item">
                         <ul>
                             <li>Digital Journalism</li>
                             <li>Hack The Hat Elective Member (Raspberry Pi & Sense Hat)</li>
@@ -197,17 +214,6 @@
                             <li>Club Leader <a href="https://hackclub-binus-school-semarang.github.io/HackClub-BSS-Landing-Page/" target="_blank" rel="noopener">Hack Club Binus School Semarang</a></li>
                             <li>STEM Club Member</li>
                         </ul>
-                    </div>
-                </div>
-                <div class="experience-card">
-                    <h2 class="experience-title">Experience</h2>
-                    <div class="experience-item">
-                        <h3>STEM Projects</h3>
-                        <p>For the 2024 STEM Festival, the Seed Paper project was developed as an eco-friendly and innovative solution that blends sustainability with science. This biodegradable paper is embedded with seeds, allowing it to be planted instead of discarded. The project aligns with the United Nations Sustainable Development Goals (SDGs), particularly those focused on responsible consumption, climate action, and life on land, showcasing the potential of innovation in everyday materials.</p>
-                    </div>
-                    <div class="experience-item">
-                        <h3>Programming</h3>
-                        <p>With a strong passion for coding, I have worked on various projects involving web and app development, Arduino programming, robotics, and artificial intelligence. My experience includes building interactive websites, developing mobile applications, integrating hardware with software, and experimenting with AI-powered solutions. I have also explored robotics, working on automation and control systems that bridge the gap between programming and real-world applications. Through these projects, I have gained hands-on experience in problem-solving, debugging, and optimizing code to create efficient and intelligent systems. Constantly learning and exploring new technologies, I strive to enhance my skills and contribute to impactful innovations.</p>
                     </div>
                 </div>
             </div>
@@ -304,7 +310,6 @@
         </div>
     </div>
 
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script src="js/script.js" defer></script>
 </body>
 </html>
