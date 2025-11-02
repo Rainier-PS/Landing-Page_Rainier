@@ -40,18 +40,73 @@ body {
     align-items: flex-start;
 }
 
-.profile-img {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    border: 3px solid #fff;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    text-align: center;
-    line-height: 250px;
+.hero { display:flex; flex-direction:column; align-items:center; padding-top:2rem; }
+.hero img { width:180px; height:180px; border-radius:50%; object-fit:cover; margin-bottom:1.5rem; transition: transform .4s ease; }
+.hero img:hover { transform: scale(1.08); }
+.hero h2 { font-size:2.2rem; margin-bottom:.5rem; }
+.hero p { font-size:1.1rem; color: var(--subtext); }
+
+.flip-card {
+  width: 280px;
+  height: 280px;
+  perspective: 1000px;
+  margin: 2rem 3.5rem 2rem 1.5rem; 
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.flip-card-front img,
+.flip-card-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+
+.logo-light {
+  display: block;
+}
+
+html.dark .logo-light {
+  display: none;
+}
+
+.logo-dark {
+  display: none;
+}
+
+html.dark .logo-dark {
+  display: block;
 }
 
 .full-width-section {
@@ -801,6 +856,7 @@ html {
 
 .cta-button:hover {
     background: #006399;
+    color: #fff;
     transform: translateY(-3px);
 }
 
@@ -872,6 +928,17 @@ form button:hover {
         grid-template-columns: repeat(3, 1fr);
         gap: 30px;
     }
+}
+
+:root {
+  --link: #007BFF;
+  --link-hover: #0056b3;
+  --footer-link: #ddd;
+}
+
+html.dark {
+  --link: #4dabf7;
+  --link-hover: #1c7ed6;
 }
 
 a {
