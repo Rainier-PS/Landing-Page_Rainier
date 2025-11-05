@@ -34,34 +34,34 @@ returnTop.addEventListener('click', () => {
     });
 });
 
-const slides = document.querySelectorAll('.project-slide');
-const totalSlides = slides.length;
-let currentSlide = 0;
+function initSlider(sliderSelector, indicatorSelector) {
+  const sliderContainer = document.querySelector(sliderSelector);
+  const slidesContainer = sliderContainer.querySelector('.projects-slides');
+  const slides = slidesContainer.querySelectorAll('.project-slide');
+  const indicators = document.querySelectorAll(indicatorSelector);
+  let currentIndex = 0;
 
-document.querySelectorAll('.slider-indicator').forEach(indicator => {
+  indicators.forEach(indicator => {
     indicator.addEventListener('click', () => {
-        currentSlide = parseInt(indicator.getAttribute('data-slide'));
-        updateSlidePosition();
+      currentIndex = parseInt(indicator.getAttribute('data-slide'));
+      updateSlidePosition();
     });
-});
+  });
 
-function updateSlidePosition() {
-    const slidesContainer = document.querySelector('.projects-slides');
-    const isMobile = window.innerWidth <= 768;
-    const slideWidth = 100;
-    slidesContainer.style.transform = `translateX(-${currentSlide * slideWidth}%)`;
+  function updateSlidePosition() {
+    slidesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
     updateIndicators();
+  }
+
+  function updateIndicators() {
+    indicators.forEach((indicator, i) => {
+      indicator.classList.toggle('active', i === currentIndex);
+    });
+  }
 }
 
-function updateIndicators() {
-    document.querySelectorAll('.slider-indicator').forEach((indicator, index) => {
-        if (index === currentSlide) {
-            indicator.classList.add('active');
-        } else {
-            indicator.classList.remove('active');
-        }
-    });
-}
+initSlider('#projects', '#projects .slider-indicator');
+initSlider('#awards', '#awards .slider-indicator');
 
 document.querySelectorAll('img:not(#profile-pic)').forEach(img => {
     img.setAttribute('loading', 'lazy');
@@ -72,15 +72,20 @@ const lightboxImg = document.getElementById('lightboxImg');
 const closeBtn = document.getElementById('closeLightbox');
 const openBtn = document.getElementById('openInNewTab');
 
-document.querySelectorAll('#projects .project-card img').forEach(img => {
-  img.style.cursor = 'zoom-in';
-  img.addEventListener('click', e => {
-    e.preventDefault();
-    lightboxImg.src = img.src;
-    lightbox.classList.add('active');
-    document.body.style.overflow = 'hidden';
+function attachLightbox(selector) {
+  document.querySelectorAll(selector).forEach(img => {
+    img.style.cursor = 'zoom-in';
+    img.addEventListener('click', e => {
+      e.preventDefault();
+      lightboxImg.src = img.src;
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
   });
-});
+}
+
+attachLightbox('#projects .project-card img');
+attachLightbox('#awards .project-card img');
 
 closeBtn.addEventListener('click', () => {
   lightbox.classList.remove('active');
